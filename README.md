@@ -1,26 +1,27 @@
-# TG Meme Bot 🎭
+# TG Mem Bot 🎭
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
 [![Telegram](https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram)](https://core.telegram.org/bots)
 [![Deploy](https://img.shields.io/badge/Deploy-Railway-purple?logo=railway)](https://railway.app/)
 
-Телеграм-бот-мемогенератор на базе **aiogram v3** и **g4f**.  
-Умеет:
-- 📸 Генерировать мемы по заданной теме  
-- 🧩 Вести общение с памятью по темам  
-- 📝 Поддерживать разные роли (стили ответов)  
+Telegram meme-generator bot built with **aiogram v3** and **g4f**.
+
+Features:
+- 📸 Generate memes based on a given topic
+- 🧩 Maintain conversational context with memory
+- 📝 Support different roles (response styles)
 
 ---
 
-## 🚀 Установка и запуск
+## 🚀 Installation & Run
 
-1. Клонируем репозиторий:
+1. Clone the repository:
    ```bash
    git clone https://github.com/yourname/tg-mem-bot.git
    cd tg-mem-bot
    ```
 
-2. Создаём виртуальное окружение и ставим зависимости:
+2. Create virtual environment & install dependencies:
    ```bash
    python -m venv .venv
    source .venv/bin/activate   # Linux/Mac
@@ -29,49 +30,49 @@
    pip install -r requirements.txt
    ```
 
-3. Создаём `.env` файл:
+3. Create `.env` file:
    ```env
    TOKEN_TG=your_telegram_bot_token
    ```
 
-4. Запуск:
+4. Run:
    ```bash
    python TG_mem_bot.py
    ```
 
 ---
 
-## ⚙️ Переменные окружения
+## ⚙️ Environment Variables
 
-- `TOKEN_TG` — токен бота от BotFather  
-- `G4F_TEXT_TIMEOUT` — таймаут генерации текста (сек), по умолчанию `15`  
-- `G4F_IMAGE_TIMEOUT` — таймаут генерации картинки (сек), по умолчанию `20`  
-
----
-
-## 📖 Команды
-
-- `/start` — запуск бота  
-- `/help` — справка по командам  
-- `/clear` — очистка памяти  
-
-Текстовые команды:
-- `Общение: <тема>` — задать тему разговора  
-- `Роль: <роль>` — установить system-роль (стиль ответов)  
-- `Мем: <тема>` — создать мем по теме  
+- `TOKEN_TG` — Telegram bot token from BotFather
+- `G4F_TEXT_TIMEOUT` — text generation timeout (sec), default `15`
+- `G4F_IMAGE_TIMEOUT` — image generation timeout (sec), default `20`
 
 ---
 
-## 🛠 Деплой на Railway
+## 📖 Commands
 
-1. Подключи репозиторий к [Railway](https://railway.app/).  
-2. В **Variables** добавь:
+- `/start` — start bot
+- `/help` — show help
+- `/clear` — clear memory
+
+Text commands:
+- `Общение: <topic>` — set topic for dialog (with memory)
+- `Роль: <role>` — set system role (response style)
+- `Мем: <topic>` — generate meme with caption & image
+
+---
+
+## 🛠 Deploy on Railway
+
+1. Connect repository to [Railway](https://railway.app/).
+2. Add **Variables**:
    ```
    TOKEN_TG=your_telegram_bot_token
    ```
-3. Задеплой — и бот работает в Телеге 🚀
+3. Deploy → Bot is live in Telegram 🚀
 
 ---
 
-## 📜 Лицензия
+## 📜 License
 MIT
